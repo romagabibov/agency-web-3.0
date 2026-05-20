@@ -1,0 +1,23 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "agencies": {
+      "$agencyId": {
+        ".read": true,
+        ".write": "auth != null",
+        "applications": {
+          ".write": "!data.exists() || auth != null"
+        }
+      }
+    },
+    "agency_packages": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "verificationCodes": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

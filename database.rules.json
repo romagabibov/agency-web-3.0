@@ -1,0 +1,70 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "agencies": {
+      "$agencyId": {
+        "users": {
+          ".read": false,
+          ".write": false
+        },
+        "verificationCodes": {
+          ".read": false,
+          ".write": false
+        },
+        "applications": {
+          ".read": "auth != null",
+          ".write": "!data.exists() || auth != null"
+        },
+        "contracts": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+        },
+        "models": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+        },
+        "settings": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "logo": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "pdfLogo": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "categories": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "agencySignature": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "agencyStamp": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "applicationQuestions": {
+          ".read": true,
+          ".write": "auth != null"
+        },
+        "notifications": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+        }
+      }
+    },
+    "agency_packages": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "verificationCodes": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

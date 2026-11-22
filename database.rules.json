@@ -1,0 +1,22 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "agencies": {
+      "$agencyId": {
+        "users": {
+          ".read": false,
+          ".write": false
+        },
+        "verificationCodes": {
+          ".read": false,
+          ".write": false
+        }
+      }
+    },
+    "verificationCodes": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

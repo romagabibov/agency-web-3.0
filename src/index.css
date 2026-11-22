@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Touch and Momentum Scrolling */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent auto-zoom on mobile iOS Safari */
+@media (max-width: 640px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Safe area padding utilities for modern smartphones */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
